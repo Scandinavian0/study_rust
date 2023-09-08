@@ -8,9 +8,17 @@ impl Rectangle {
     fn area(&self) -> u32 {
         self.width * self.height
     }
-
+    // 多参数引用
     fn can_hold(&self, other: &Rectangle) -> bool {
         self.width > other.width && self.height > other.height
+    }
+
+    // 关联函数,更轻松地创建一个正方形
+    fn square(size:u32)->Self{
+        Self{
+            width:size,
+            height:size,
+        }
     }
 }
 
