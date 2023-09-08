@@ -4,6 +4,8 @@ struct Rectangle {
     height: u32,
 }
 
+
+
 impl Rectangle {
     fn area(&self) -> u32 {
         self.width * self.height
