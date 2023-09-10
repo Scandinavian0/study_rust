@@ -45,6 +45,8 @@ mod front_of_house {
     }
 }
 
+use front_of_house::hosting;
+
 pub fn eat_at_restaurant(){
     //父模块中的项不能使用子模块中的私有项，但是子模块中的项可以使用他们父模块中的项
     // 不适用pub的话会报错module `hosting` is private
@@ -70,6 +72,9 @@ pub fn eat_at_restaurant(){
     let order1= front_of_house::Appetizer::Soup;
     let order2=front_of_house::Appetizer::Salad;
     let order3=front_of_house::test::Salad;
+
+    // 使用use引入作用域
+    hosting::add_to_waitlist();
 }
 
 fn deliver_order(){
