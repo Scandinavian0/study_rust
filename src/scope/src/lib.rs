@@ -32,6 +32,17 @@ mod front_of_house {
             }
         }
     }
+
+    //如果我们将枚举设为公有，则它的所有成员都将变为公有
+    pub enum Appetizer{
+        Soup,
+        Salad,
+    }
+
+    pub enum test{
+        Soup,
+        Salad,
+    }
 }
 
 pub fn eat_at_restaurant(){
@@ -54,6 +65,11 @@ pub fn eat_at_restaurant(){
     // 不允许查看或修改早餐附带的季节水果
     //Field `seasonal_fruit` of struct `front_of_house::Breakfast` is private
     // meal.seasonal_fruit = String::from("blueberries");
+
+    // 枚举
+    let order1= front_of_house::Appetizer::Soup;
+    let order2=front_of_house::Appetizer::Salad;
+    let order3=front_of_house::test::Salad;
 }
 
 fn deliver_order(){
@@ -68,3 +84,4 @@ mod back_of_house{
 
     fn cook_order(){}
 }
+
