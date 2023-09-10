@@ -9,12 +9,20 @@
       <sourceFolder url="file://$MODULE_DIR$/src/variables/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/variables/src/get/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/ownership/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/enums/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/struct_code/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/scope/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/scope/src/test_1/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/src/gussing_game/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/t/target" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/variables/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/variables/src/get/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/ownership/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/enums/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/struct_code/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/scope/src/test_1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/scope/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
