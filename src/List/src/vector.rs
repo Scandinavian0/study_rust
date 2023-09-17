@@ -35,3 +35,27 @@ pub fn for_vector_element(){
         println!("{i}");
     }
 }
+
+pub fn string_code(){
+    // updata
+    let mut s1=String::from("foo");
+    let mut s2=String::from("foo");
+    let s3="bar";
+    s1.push_str(s3);
+    // push默认是追加一个char
+    // s2.push(s3);
+    println!("s3 is {s3}");
+
+    // format 宏
+    format();
+}
+
+fn format(){
+    let s1 = String::from("tic");
+    let s2 = String::from("tac");
+    let s3 = String::from("toe");
+    // 使用宏定义不会获取参数或者变量的所有权
+
+    let s=format!("{s1}-{s2}-{s3}");
+    println!("{s}");
+}
