@@ -17,3 +17,21 @@ pub fn get_vector_element(){
         Some(third) => println!("The third element is {third}"),
     }
 }
+
+pub fn for_vector_element(){
+    let v=add_element();
+    for i in &v{
+        println!("{i}");
+    }
+
+    println!("遍历可变值的vector");
+    let mut v=add_element();
+    for i in &mut v {
+        println!("{i}");
+        // 解引
+        *i+=50;
+    }
+    for i in &mut v {
+        println!("{i}");
+    }
+}
