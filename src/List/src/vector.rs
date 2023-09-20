@@ -81,6 +81,11 @@ pub fn hash_map(){
     //Help: consider cloning the value if the performance cost is acceptable
     //这里 field_name 和 field_value 不再有效
     // println!("{:?}",field_name);
+
+    // 覆盖scores的值
+    scores.insert(String::from("blue"),15);
+    let score=scores.get(&team_name).copied().unwrap_or(0);
+    println!("{:?}",score);
 }
 
 
