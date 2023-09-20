@@ -1,4 +1,5 @@
-pub fn add_element()->Vec<i32>{
+use std::collections::HashMap;
+pub fn add_element() ->Vec<i32>{
     let mut v=Vec::new();
     v.push(5);
     v.push(6);
@@ -59,3 +60,27 @@ fn format(){
     let s=format!("{s1}-{s2}-{s3}");
     println!("{s}");
 }
+
+pub fn hash_map(){
+    let mut scores=HashMap::new();
+    scores.insert(String::from("blue"),10);
+    scores.insert(String::from("yellow"),50);
+    let team_name=String::from("blue");
+    //程序中通过调用 copied 方法来获取一个 Option<i32> 而不是 Option<&i32>，接着调用 unwrap_or 在 score 中没有该键所对应的项时将其设置为零
+    //如果没有使用unwrap_or，则会打印出来Some(10)
+    let score=scores.get(&team_name).copied().unwrap_or(0);
+    println!("{:?}",score);
+
+
+    // hashmap和所有权
+    let field_name = String::from("Favorite color");
+    let field_value = String::from("Blue");
+
+    let mut map = HashMap::new();
+    map.insert(field_name, field_value);
+    //Help: consider cloning the value if the performance cost is acceptable
+    //这里 field_name 和 field_value 不再有效
+    // println!("{:?}",field_name);
+}
+
+
