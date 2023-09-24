@@ -86,6 +86,26 @@ pub fn hash_map(){
     scores.insert(String::from("blue"),15);
     let score=scores.get(&team_name).copied().unwrap_or(0);
     println!("{:?}",score);
+    //entry 函数的返回值是一个枚举，Entry，它代表了可能存在也可能不存在的值
+
+    let mut scores=HashMap::new();
+    scores.insert(String::from("blue"),10);
+    scores.entry(String::from("yellow")).or_insert(50);
+    scores.entry(String::from("blue")).or_insert(50);
+    println!("{:?}",scores);
+
+    // 根据旧值更新一个值
+    let test="hello world wonderful world";
+    let mut map=HashMap::new();
+    for word in test.split_whitespace() {
+        //or_insert 方法返回这个键的值的一个可变引用（&mut V）
+        let count=map.entry(word).or_insert(0);
+        //*解引用
+        *count+=1;
+
+    }
+
+    println!("{:?}",map);
 }
 
 
