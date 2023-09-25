@@ -32,7 +32,7 @@ pub fn home_work_3(){
 
             "List"=>{
                 if let  Some(employees)=company.get(department) {
-                    println!("Employees in {} department: {:?}", department, employees);
+                    println!("  Employees in {} department: {:?}", department, employees);
                 } else {
                     println!("Department {} not found.", department);
                 }
