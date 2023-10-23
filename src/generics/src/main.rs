@@ -1,21 +1,4 @@
-fn main() {
-    let number_list = vec![34, 50, 25, 100, 65];
-
-    let result = largest_i32(&number_list);
-    println!("The largest number is {}", result);
-
-    let char_list = vec!['y', 'm', 'a', 'q'];
-    let result = largest_char(&char_list);
-    println!("The largest char is {}", result);
-
-    let p1 = Point { x: 5, y: 10.4 };
-    let p2 = Point { x: "Hello", y: 'c'};
-
-    let p3 = p1.mixup(p2);
-
-    println!("p3.x = {}, p3.y = {}", p3.x, p3.y);
-}
-
+use std::fmt::Debug;
 
 fn largest_i32(list: &[i32]) -> &i32 {
     let mut largest = &list[0];
@@ -82,4 +65,36 @@ fn struct_code() {
     let float = Point { x: 1.0, y: 2.0 };
     let integer_and_float = Point { x: 5, y: 4.0 };
 
+}
+
+
+// const泛型
+fn display_arry<T:Debug>(arr:&[T]){
+    println!("{:?}",arr);
+}
+
+
+
+fn main() {
+    let number_list = vec![34, 50, 25, 100, 65];
+
+    let result = largest_i32(&number_list);
+    println!("The largest number is {}", result);
+
+    let char_list = vec!['y', 'm', 'a', 'q'];
+    let result = largest_char(&char_list);
+    println!("The largest char is {}", result);
+
+    let p1 = Point { x: 5, y: 10.4 };
+    let p2 = Point { x: "Hello", y: 'c'};
+
+    let p3 = p1.mixup(p2);
+
+    println!("p3.x = {}, p3.y = {}", p3.x, p3.y);
+
+    // const
+    let arr:[i32;3]=[1,2,3];
+    display_arry(&arr);
+    let arr:[i32;2]=[1,2];
+    display_arry(&arr);
 }
