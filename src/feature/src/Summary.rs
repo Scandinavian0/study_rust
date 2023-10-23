@@ -1,5 +1,5 @@
 pub trait summary {
-    fn sumamarize(&self)->String;
+    fn summarize(&self) ->String;
 }
 
 pub struct Post{
@@ -9,7 +9,7 @@ pub struct Post{
 }
 
 impl summary for Post{
-    fn sumamarize(&self) -> String {
+    fn summarize(&self) -> String {
         format!("文章{},作者是{}",self.tile,self.author)
     }
 }
@@ -20,7 +20,7 @@ pub struct weibo{
 }
 
 impl summary for weibo{
-    fn sumamarize(&self) -> String {
+    fn summarize(&self) -> String {
         format!("{}发表了微博{}",self.username,self.content)
     }
 }
