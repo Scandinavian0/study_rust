@@ -14,6 +14,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/scope/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/scope/src/test_1/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/List/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/panic/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/src/gussing_game/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/t/target" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
@@ -25,6 +26,7 @@
       <excludeFolder url="file://$MODULE_DIR$/src/scope/src/test_1/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/scope/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/List/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/panic/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
